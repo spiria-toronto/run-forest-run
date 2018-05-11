@@ -5,11 +5,10 @@ class CreateCities < ActiveRecord::Migration[5.2]
       t.string :usps
       t.integer :ansicode
       t.string :name
-      t.decimal :latitude
-      t.decimal :longitude
+      t.decimal :latitude, precision: 10, scale: 5
+      t.decimal :longitude, precision: 10, scale: 5
       t.decimal :population
-      t.decimal :density
-      t.timestamps
+      t.decimal :density, precision: 10, scale: 5
     end
   end
 end
